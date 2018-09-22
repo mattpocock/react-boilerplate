@@ -157,6 +157,14 @@ module.exports = {
         templateFile: './container/reducer.test.js.hbs',
         abortOnFail: true,
       });
+
+      // suit.json
+      actions.push({
+        type: 'add',
+        path: '../../app/containers/{{properCase name}}/suit.json',
+        templateFile: './container/suit.json.hbs',
+        abortOnFail: true,
+      });
     }
 
     // Sagas

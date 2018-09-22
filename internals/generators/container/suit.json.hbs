@@ -1,0 +1,23 @@
+{
+  "defaultDomain": {
+    "describe": "An example of a domain with a single value",
+    "initialState": {
+      "value": true
+    },
+    "actions": {
+      "changeDefaultDomain": {
+        "describe": "Changes the value in the default domain with a payload",
+        "passAsProp": true,
+        {{#if wantSaga}}
+        "saga": true,
+        {{else}}
+        "saga": false,
+        {{/if}}
+        "payload": true,
+        "set": {
+          "value": "payload"
+        }
+      }
+    }
+  }
+}

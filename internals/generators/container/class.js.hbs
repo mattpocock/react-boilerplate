@@ -23,7 +23,6 @@ import injectSaga from 'utils/injectSaga';
 {{/if}}
 {{#if wantActionsAndReducer}}
 import injectReducer from 'utils/injectReducer';
-import makeSelect{{properCase name}} from './selectors';
 import reducer from './reducer';
 {{/if}}
 {{#if wantSaga}}
@@ -58,7 +57,7 @@ export class {{ properCase name }} extends {{{ type }}} {
 
 {{#if wantActionsAndReducer}}
 const mapStateToProps = createStructuredSelector({
-  {{ lowerCase name }}: makeSelect{{properCase name}}(),
+  // Selectors go in here
 });
 {{/if}}
 
